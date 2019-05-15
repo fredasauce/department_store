@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
   
   def index
-    @items = @department.items
+    @items = @department.items.by_name
   end
 
   def show
